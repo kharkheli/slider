@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Slider from "./customSlider/customSlider";
+import Slider from "./slider";
 import "./App.css";
 
 function App() {
