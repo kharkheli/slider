@@ -41,8 +41,6 @@ export default function Slider() {
     return (current - 1 + slides.length) % slides.length;
   }, [current]);
 
-  console.log(previousSlide, current, nextSlide);
-
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.pause();
