@@ -50,11 +50,11 @@ export default function Slider() {
       if (videoRef.current) videoRef.current.play();
     }, 1000);
 
-    const interval = setInterval(() => {
+    const interval = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, slides[current || 0].play_seconds * 1000 + 1000);
     return () => {
-      clearInterval(interval);
+      clearTimeout(interval);
       clearTimeout(videoTimer);
     };
   }, [current]);
